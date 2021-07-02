@@ -1,0 +1,143 @@
+{% extends "bootstrap/base.html" %}
+{% block content %}
+<div class="container">
+  <div class="jumbotron" >
+    <!-- <img src="3.jpg" height="100px" width="100px" align="right"> -->
+    <h3>Prediction System on Career Guidance</h3>
+    <p>For Computer/IT Engineering Students</p> 
+  </div>
+</div>
+<body style="background-color: #3498DB">
+<div class="container" >
+<div class="jumbotron" >
+
+<form action="/result" name="Career" method="POST"> 
+
+  <p><b>Scores Till Now</b></p>
+  <label>1)SSC Score<br>
+  <input type="radio" name="a" value="1">0-35<br>
+  <input type="radio" name="a" value="2">35-50<br>
+  <input type="radio" name="a"value="3">50-75<br>
+  <input type="radio" name="a"value="4">75-100<br>
+  </label><br><br>
+
+  <label>2)HSC Score<br>
+  <input type="radio" name="b" value="1">0-35<br>
+  <input type="radio" name="b"value="2">35-50<br>
+  <input type="radio" name="b"value="3">50-75<br>
+  <input type="radio" name="b"value="4">75-100<br>
+  </label><br><br>
+
+  <label>3)CGPA<br>
+  <input type="radio" name="c" value="1">0-4<br>
+  <input type="radio" name="c" value="2">4-6<br>
+  <input type="radio" name="c"value="3">6-8<br>
+  <input type="radio" name="c"value="4">8-10<br>
+  </label><br><br> 
+
+  <label>4)School Type<br>
+  <input type="radio" name="d" value="1">State Board<br>
+  <input type="radio" name="d" value="2">CBSE<br>
+  <input type="radio" name="d"value="3">ICSE<br>
+  <input type="radio" name="d"value="4">IGCSE<br>
+  </label><br><br> 
+
+  <p><b>Projects Handled</b></p>
+  <label>1)No of mini projects<br>
+  <input type="radio" name="e"value="1">1<br>
+  <input type="radio" name="e"value="2">2<br>
+  <input type="radio" name="e"value="3">3<br>
+  <input type="radio" name="e"value="4">4<br>
+  </label><br><br> 
+
+  <label>2)No of projects<br>
+  <input type="radio" name="f"value="1">1<br>
+  <input type="radio" name="f"value="2">2<br>
+  <input type="radio" name="f"value="3">3<br>
+  <input type="radio" name="f"value="1\4">4<br>
+  </label><br><br> 
+
+  <p><b>Skill Set</b></p>
+  <label>1)Core subject skills<br>
+  <input type="radio" name="i"value="1">Java<br>
+  <input type="radio" name="i"value="2">Python<br>
+  </label><br><br> 
+
+  <label>2)Aptitude Skill<br>
+  <input type="radio" name="j" value="1">1-Excellent<br>
+  <input type="radio" name="j" value="2">2-Good<br>
+  <input type="radio" name="j"value="3">3-Average<br>
+  <input type="radio" name="j"value="4">4-Poor<br>
+  </label><br><br> 
+
+  <label>3)Problem solving Skill<br>
+  <input type="radio" name="k" value="1">1-Excellent<br>
+  <input type="radio" name="k"value="2">2-Good<br>
+  <input type="radio" name="k"value="3">3-Average<br>
+  <input type="radio" name="k"value="4">4-Poor<br>
+  </label><br><br> 
+
+  
+  <label>4)Programming skills<br>
+  <input type="radio" name="r"value="1">1-Excellent<br>
+  <input type="radio" name="r"value="2">2-Good<br>
+  <input type="radio" name="r"value="3">3-Average<br>
+  <input type="radio" name="r"value="4">4-Poor<br>
+ 
+  </label><br><br> 
+
+  <label>5)Abstract thinking Skill<br>
+  <input type="radio" name="l" value="1">1-Excellent<br>
+  <input type="radio" name="l"value="2">2-Good<br>
+  <input type="radio" name="l"value="3">3-Average<br>
+  <input type="radio" name="l"value="4">4-Poor<br>
+  
+  </label><br><br> 
+
+
+<label>6)Design Skill<br>
+  <input type="radio" name="m" value="1">1-Excellent<br>
+  <input type="radio" name="m"value="2">2-Good<br>
+  <input type="radio" name="m"value="3">3-Average<br>
+  <input type="radio" name="m"value="4">4-Poor<br>
+  </label><br><br> 
+
+  <p><b>Technical</b></p>
+  <label>1)Data structure coding<br>
+  <input type="radio" name="n"value="1">1-Excellent<br>
+  <input type="radio" name="n"value="2">2-Good<br>
+  <input type="radio" name="n"value="3">3-Average<br>
+  <input type="radio" name="n"value="4">4-Poor<br>
+  </label><br><br> 
+
+  <label>2)Technology used<br>
+  <input type="radio" name="o"value="1">1-Excellent<br>
+  <input type="radio" name="o"value="2">2-Good<br>
+  <input type="radio" name="o"value="3">3-Average<br>
+  <input type="radio" name="o"value="4">4-Poor<br>
+ 
+  </label><br><br> 
+
+  <label>3)Hackathons won<br>
+   <input type="radio" name="p"value="1">1<br>
+  <input type="radio" name="p"value="2">2<br>
+  <input type="radio" name="p"value="3">3<br>
+  <input type="radio" name="p"value="4">4<br>
+  </label><br><br>
+
+  <label>4)College Performance<br>
+  <input type="radio" name="q"value="1">1-Excellent<br>
+  <input type="radio" name="q"value="2">2-Good<br>
+  <input type="radio" name="q"value="3">3-Average<br>
+  <input type="radio" name="q"value="4">4-Poor<br>
+  </label><br><br>
+
+
+  
+  <input type="submit" value="Submit" class="btn btn-primary"> 
+</form>  
+</div>
+</div>
+</body>
+</html>
+{% endblock %}
